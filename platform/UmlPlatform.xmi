@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<platform:PlatformDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:platform="edu.uoc.som.jarvis.platform" name="UmlPlatform" runtimePath="edu.uoc.som.jarvis.uml.platform.UmlPlatform">
+  <actions name="CreateClass">
+    <parameters key="name"/>
+  </actions>
+  <actions name="GetClass">
+    <parameters key="name"/>
+  </actions>
+  <actions name="AddAttribute">
+    <parameters key="class"/>
+    <parameters key="name"/>
+  </actions>
+  <actions name="AddAttribute">
+    <parameters key="class"/>
+    <parameters key="name"/>
+    <parameters key="type"/>
+  </actions>
+  <actions name="AddAssociation">
+    <parameters key="source"/>
+    <parameters key="target"/>
+    <parameters key="type"/>
+  </actions>
+  <actions name="Save"/>
+</platform:PlatformDefinition>

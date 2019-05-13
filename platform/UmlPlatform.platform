@@ -1,0 +1,14 @@
+Platform UmlPlatform
+
+path "edu.uoc.som.jarvis.uml.platform.UmlPlatform"
+
+actions {
+	
+	CreateClass(name)
+	GetClass(name)
+	AddAttribute(class, name)
+	AddAttribute(class, name, type)
+	AddAssociation(source, target, type)
+	Save
+	
+}

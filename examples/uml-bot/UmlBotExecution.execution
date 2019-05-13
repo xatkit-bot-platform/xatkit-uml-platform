@@ -1,0 +1,28 @@
+import library "uml-bot/UmlBotLibrary.xmi"
+import platform "SlackPlatform"
+import platform "UmlPlatform/UmlPlatform.xmi"
+import library "CoreLibrary"
+
+use provider SlackPlatform.SlackIntentProvider
+
+on intent CreateClass do
+	def class = action UmlPlatform.CreateClass(name : context(Class).get("name"))
+	session.store("class", class)
+	action SlackPlatform.Reply(message : "Created class " + context(Class).get("name"))
+	
+on intent AddAttribute do
+	def attribute = action UmlPlatform.AddAttribute(class : session.get("class"), name : context(Attribute).get("name"), type : context(Attribute).get("type"))
+	action SlackPlatform.Reply(message : "Created attribute " + context(Attribute).get("name"))
+	
+on intent Contains do
+	def source = action UmlPlatform.GetClass(name : context(Composition).get("source"))
+	def target = action UmlPlatform.GetClass(name : context(Composition).get("target"))
+	def asso = action UmlPlatform.AddAssociation(source : source, target : target, type : "lol")
+	action SlackPlatform.Reply(message : "Done")
+	
+on intent Save do
+	def saved = action UmlPlatform.Save
+	action SlackPlatform.ReplyFileMessage(message : "here you go", file : saved)
+	
+on intent Default_Fallback_Intent do
+	action SlackPlatform.Reply(message : "Sorry I didn't get it :/")

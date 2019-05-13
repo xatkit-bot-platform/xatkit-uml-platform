@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ASCII"?>
+<intent:Library xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:intent="edu.uoc.som.jarvis.intent" name="UmlBotLibrary">
+  <eventDefinitions xsi:type="intent:IntentDefinition" name="CreateClass">
+    <outContexts name="Class">
+      <parameters name="name" textFragment="MyClass">
+        <entity xsi:type="intent:BaseEntityDefinitionReference">
+          <baseEntity/>
+        </entity>
+      </parameters>
+    </outContexts>
+    <trainingSentences>create class MyClass</trainingSentences>
+  </eventDefinitions>
+  <eventDefinitions xsi:type="intent:IntentDefinition" name="AddAttribute">
+    <outContexts name="Attribute">
+      <parameters name="name" textFragment="MyAttribute">
+        <entity xsi:type="intent:BaseEntityDefinitionReference">
+          <baseEntity/>
+        </entity>
+      </parameters>
+      <parameters name="type" textFragment="MyType">
+        <entity xsi:type="intent:BaseEntityDefinitionReference">
+          <baseEntity/>
+        </entity>
+      </parameters>
+    </outContexts>
+    <trainingSentences>add attribute MyAttribute</trainingSentences>
+    <trainingSentences>add attribute MyAttribute with type MyType</trainingSentences>
+  </eventDefinitions>
+  <eventDefinitions xsi:type="intent:IntentDefinition" name="Contains">
+    <outContexts name="Composition">
+      <parameters name="source" textFragment="Class1">
+        <entity xsi:type="intent:BaseEntityDefinitionReference">
+          <baseEntity/>
+        </entity>
+      </parameters>
+      <parameters name="target" textFragment="Class2">
+        <entity xsi:type="intent:BaseEntityDefinitionReference">
+          <baseEntity/>
+        </entity>
+      </parameters>
+    </outContexts>
+    <trainingSentences>Class1 contains Class2</trainingSentences>
+  </eventDefinitions>
+  <eventDefinitions xsi:type="intent:IntentDefinition" name="Save">
+    <trainingSentences>save</trainingSentences>
+  </eventDefinitions>
+</intent:Library>

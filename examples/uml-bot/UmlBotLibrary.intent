@@ -1,0 +1,37 @@
+Library UmlBotLibrary
+
+intent CreateClass {
+	inputs {
+		"create class MyClass"
+	}
+	creates context Class {
+		sets parameter name from fragment "MyClass" (entity any)
+	}
+}
+
+intent AddAttribute {
+	inputs {
+		"add attribute MyAttribute"
+		"add attribute MyAttribute with type MyType"
+	}
+	creates context Attribute {
+		sets parameter name from fragment "MyAttribute" (entity any)
+		sets parameter type from fragment "MyType" (entity any)
+	}
+}
+
+intent Contains {
+	inputs {
+		"Class1 contains Class2"
+	}
+	creates context Composition {
+		sets parameter source from fragment "Class1" (entity any)
+		sets parameter target from fragment "Class2" (entity any)
+	}
+}
+
+intent Save {
+	inputs {
+		"save"
+	}
+}
