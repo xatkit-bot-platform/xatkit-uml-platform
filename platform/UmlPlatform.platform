@@ -1,6 +1,6 @@
 Platform UmlPlatform
 
-path "edu.uoc.som.jarvis.uml.platform.UmlPlatform"
+path "com.xatkit.plugins.uml.platform.UmlPlatform"
 
 actions {
 	
