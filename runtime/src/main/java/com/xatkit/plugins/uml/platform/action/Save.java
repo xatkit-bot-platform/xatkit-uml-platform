@@ -1,8 +1,8 @@
-package edu.uoc.som.jarvis.uml.platform.action;
+package com.xatkit.plugins.uml.platform.action;
 
-import edu.uoc.som.jarvis.core.platform.action.RuntimeAction;
-import edu.uoc.som.jarvis.core.session.JarvisSession;
-import edu.uoc.som.jarvis.uml.platform.UmlPlatform;
+import com.xatkit.core.platform.action.RuntimeAction;
+import com.xatkit.core.session.XatkitSession;
+import com.xatkit.plugins.uml.platform.UmlPlatform;
 import net.sourceforge.plantuml.SourceStringReader;
 import org.eclipse.uml2.uml.Association;
 import org.eclipse.uml2.uml.Class;
@@ -15,7 +15,7 @@ import static java.util.Objects.nonNull;
 
 public class Save extends RuntimeAction<UmlPlatform> {
 
-    public Save(UmlPlatform umlPlatform, JarvisSession session) {
+    public Save(UmlPlatform umlPlatform, XatkitSession session) {
         super(umlPlatform, session);
     }
 

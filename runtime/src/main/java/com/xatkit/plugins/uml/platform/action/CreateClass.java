@@ -1,8 +1,8 @@
-package edu.uoc.som.jarvis.uml.platform.action;
+package com.xatkit.plugins.uml.platform.action;
 
-import edu.uoc.som.jarvis.core.platform.action.RuntimeAction;
-import edu.uoc.som.jarvis.core.session.JarvisSession;
-import edu.uoc.som.jarvis.uml.platform.UmlPlatform;
+import com.xatkit.core.platform.action.RuntimeAction;
+import com.xatkit.core.session.XatkitSession;
+import com.xatkit.plugins.uml.platform.UmlPlatform;
 import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.UMLFactory;
 
@@ -10,7 +10,7 @@ public class CreateClass extends RuntimeAction<UmlPlatform> {
 
     private String name;
 
-    public CreateClass(UmlPlatform umlPlatform, JarvisSession session, String name) {
+    public CreateClass(UmlPlatform umlPlatform, XatkitSession session, String name) {
         super(umlPlatform, session);
         this.name = name;
     }

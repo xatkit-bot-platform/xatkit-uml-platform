@@ -1,8 +1,8 @@
-package edu.uoc.som.jarvis.uml.platform.action;
+package com.xatkit.plugins.uml.platform.action;
 
-import edu.uoc.som.jarvis.core.platform.action.RuntimeAction;
-import edu.uoc.som.jarvis.core.session.JarvisSession;
-import edu.uoc.som.jarvis.uml.platform.UmlPlatform;
+import com.xatkit.core.platform.action.RuntimeAction;
+import com.xatkit.core.session.XatkitSession;
+import com.xatkit.plugins.uml.platform.UmlPlatform;
 import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.*;
 
@@ -14,7 +14,7 @@ public class AddAssociation extends RuntimeAction<UmlPlatform> {
 
     private String type;
 
-    public AddAssociation(UmlPlatform umlPlatform, JarvisSession session, Class source, Class target, String type) {
+    public AddAssociation(UmlPlatform umlPlatform, XatkitSession session, Class source, Class target, String type) {
         super(umlPlatform, session);
         this.source = source;
         this.target = target;

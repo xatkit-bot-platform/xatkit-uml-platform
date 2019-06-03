@@ -1,8 +1,8 @@
-package edu.uoc.som.jarvis.uml.platform.action;
+package com.xatkit.plugins.uml.platform.action;
 
-import edu.uoc.som.jarvis.core.platform.action.RuntimeAction;
-import edu.uoc.som.jarvis.core.session.JarvisSession;
-import edu.uoc.som.jarvis.uml.platform.UmlPlatform;
+import com.xatkit.core.platform.action.RuntimeAction;
+import com.xatkit.core.session.XatkitSession;
+import com.xatkit.plugins.uml.platform.UmlPlatform;
 import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.DataType;
 import org.eclipse.uml2.uml.Property;
@@ -18,14 +18,14 @@ public class AddAttribute extends RuntimeAction<UmlPlatform> {
 
     private String type;
 
-    public AddAttribute(UmlPlatform umlPlatform, JarvisSession session, Class clazz, String name, String type) {
+    public AddAttribute(UmlPlatform umlPlatform, XatkitSession session, Class clazz, String name, String type) {
         super(umlPlatform, session);
         this.name = name;
         this.clazz = clazz;
         this.type = type;
     }
 
-    public AddAttribute(UmlPlatform umlPlatform, JarvisSession session, Class clazz, String name) {
+    public AddAttribute(UmlPlatform umlPlatform, XatkitSession session, Class clazz, String name) {
         this(umlPlatform, session, clazz, name, null);
     }
 
