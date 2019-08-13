@@ -32,3 +32,18 @@ target
 
 # Eclipse
 .settings
+
+# Eclipse
+.settings
+
+# xatkit data
+**/data
+
+# xatkit logs
+**/logs
+
+# Deployment files with credentials
+*-private.properties
+
+# Bin scripts
+bin

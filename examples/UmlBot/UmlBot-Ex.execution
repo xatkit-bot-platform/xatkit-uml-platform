@@ -1,9 +1,9 @@
-import library "uml-bot/UmlBotLibrary.xmi"
+import library "UmlBot/UmlBot-Lib.xmi"
 import platform "SlackPlatform"
-import platform "UmlPlatform/UmlPlatform.xmi"
+import platform "UmlPlatform"
 import library "CoreLibrary"
 
-use provider SlackPlatform.SlackIntentProvider
+use provider SlackPlatform.ChatProvider
 
 on intent CreateClass do
 	def class = action UmlPlatform.CreateClass(name : context(Class).get("name"))
@@ -17,7 +17,7 @@ on intent AddAttribute do
 on intent Contains do
 	def source = action UmlPlatform.GetClass(name : context(Composition).get("source"))
 	def target = action UmlPlatform.GetClass(name : context(Composition).get("target"))
-	def asso = action UmlPlatform.AddAssociation(source : source, target : target, type : "lol")
+	def asso = action UmlPlatform.AddAssociation(source : source, target : target, type : "test")
 	action SlackPlatform.Reply(message : "Done")
 	
 on intent Save do
