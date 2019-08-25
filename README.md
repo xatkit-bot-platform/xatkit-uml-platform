@@ -6,6 +6,8 @@ Xatkit UML Platform
 
 Create and manipulate [UML](https://www.omg.org/spec/UML/About-UML/) (meta) models in Xatkit execution models. This platform is **not** bundled with the [Xatkit release](https://github.com/xatkit-bot-platform/xatkit-releases/releases).
 
+UML models are internally stored as instances of the Eclipse UML metamodel. To render them (see *Save* action below), we rely on [PlantuML](http://plantuml.com/): the UML model is transformed to PlantUML syntax and render by PlantUML before returning it back to the requester.  
+
 ## Providers
 
 The UML platform does not define any provider.
@@ -24,3 +26,8 @@ The UML platform does not define any provider.
 ## Options
 
 The UML platform does not support any configuration option.
+
+## Installation Notes
+
+PlantUML uses [Graphviz](https://graphviz.gitlab.io/) for rendering the UML diagram. Make sure you have Graphviz installed before trying to use this platform. [More info on Graphviz installation](http://plantuml.com/fr/graphviz-dot)
+
