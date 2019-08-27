@@ -33,9 +33,6 @@ target
 # Eclipse
 .settings
 
-# Eclipse
-.settings
-
 # xatkit data
 **/data
 
