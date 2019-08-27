@@ -2,7 +2,7 @@
 <execution:ExecutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="com.xatkit.common" xmlns:execution="com.xatkit.execution">
   <eventProviderDefinitions href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@eventProviderDefinitions.1"/>
   <executionRules>
-    <event href="file:/C:/Users/Gwendal/Documents/Dev/xatkit-dev/src/platforms/xatkit-uml-platform/examples/UmlBot/UmlBot-Lib.xmi#//@eventDefinitions.0"/>
+    <event href="pathmap://XATKIT_CUSTOM_LIBRARY/UmlBotLib#//@eventDefinitions.0"/>
     <instructions xsi:type="common:VariableDeclaration" name="class">
       <value xsi:type="execution:ActionInstance">
         <action href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.0"/>
@@ -35,7 +35,7 @@
     </instructions>
   </executionRules>
   <executionRules>
-    <event href="file:/C:/Users/Gwendal/Documents/Dev/xatkit-dev/src/platforms/xatkit-uml-platform/examples/UmlBot/UmlBot-Lib.xmi#//@eventDefinitions.1"/>
+    <event href="pathmap://XATKIT_CUSTOM_LIBRARY/UmlBotLib#//@eventDefinitions.1"/>
     <instructions xsi:type="common:VariableDeclaration" name="attribute">
       <value xsi:type="execution:ActionInstance">
         <action href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.3"/>
@@ -77,7 +77,7 @@
     </instructions>
   </executionRules>
   <executionRules>
-    <event href="file:/C:/Users/Gwendal/Documents/Dev/xatkit-dev/src/platforms/xatkit-uml-platform/examples/UmlBot/UmlBot-Lib.xmi#//@eventDefinitions.2"/>
+    <event href="pathmap://XATKIT_CUSTOM_LIBRARY/UmlBotLib#//@eventDefinitions.2"/>
     <instructions xsi:type="common:VariableDeclaration" name="source">
       <value xsi:type="execution:ActionInstance">
         <action href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.1"/>
@@ -128,7 +128,7 @@
     </instructions>
   </executionRules>
   <executionRules>
-    <event href="file:/C:/Users/Gwendal/Documents/Dev/xatkit-dev/src/platforms/xatkit-uml-platform/examples/UmlBot/UmlBot-Lib.xmi#//@eventDefinitions.3"/>
+    <event href="pathmap://XATKIT_CUSTOM_LIBRARY/UmlBotLib#//@eventDefinitions.3"/>
     <instructions xsi:type="common:VariableDeclaration" name="saved">
       <value xsi:type="execution:ActionInstance">
         <action href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.5"/>
@@ -156,7 +156,7 @@
       </values>
     </instructions>
   </executionRules>
-  <imports xsi:type="common:LibraryImportDeclaration" path="UmlBot/UmlBot-Lib.xmi"/>
+  <imports xsi:type="common:LibraryImportDeclaration" path="UmlBot/UmlBot-Lib.xmi" alias="UmlBotLib"/>
   <imports xsi:type="common:PlatformImportDeclaration" path="SlackPlatform"/>
   <imports xsi:type="common:PlatformImportDeclaration" path="UmlPlatform"/>
   <imports xsi:type="common:LibraryImportDeclaration" path="CoreLibrary"/>

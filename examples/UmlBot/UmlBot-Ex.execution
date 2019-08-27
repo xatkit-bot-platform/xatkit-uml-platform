@@ -1,4 +1,4 @@
-import library "UmlBot/UmlBot-Lib.xmi"
+import library "UmlBot/UmlBot-Lib.xmi" as UmlBotLib
 import platform "SlackPlatform"
 import platform "UmlPlatform"
 import library "CoreLibrary"
