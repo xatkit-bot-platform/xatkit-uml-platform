@@ -47,3 +47,7 @@ target
 
 # Bin scripts
 bin
+
+# Generated UML files
+
+output.png
