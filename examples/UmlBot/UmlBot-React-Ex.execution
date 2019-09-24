@@ -1,0 +1,28 @@
+import library "UmlBot/UmlBot-Lib.xmi" as UmlBotLib
+import platform "ReactPlatform"
+import platform "UmlPlatform"
+import library "CoreLibrary"
+
+use provider ReactPlatform.ChatProvider
+
+on intent CreateClass do
+	def class = action UmlPlatform.CreateClass(name : context(Class).get("name"))
+	session.store("class", class)
+	action ReactPlatform.Reply(message : "Created class " + context(Class).get("name"))
+	
+on intent AddAttribute do
+	def attribute = action UmlPlatform.AddAttribute(class : session.get("class"), name : context(Attribute).get("name"), type : context(Attribute).get("type"))
+	action ReactPlatform.Reply(message : "Created attribute " + context(Attribute).get("name"))
+	
+on intent Contains do
+	def source = action UmlPlatform.GetClass(name : context(Composition).get("source"))
+	def target = action UmlPlatform.GetClass(name : context(Composition).get("target"))
+	def asso = action UmlPlatform.AddAssociation(source : source, target : target, type : "test")
+	action ReactPlatform.Reply(message : "Done")
+	
+on intent Save do
+	def saved = action UmlPlatform.Save
+	action ReactPlatform.ReplyFileMessage(file : saved)
+	
+on intent Default_Fallback_Intent do
+	action ReactPlatform.Reply(message : "Sorry I didn't get it :/")

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="ASCII"?>
+<execution:ExecutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="com.xatkit.common" xmlns:execution="com.xatkit.execution">
+  <eventProviderDefinitions href="pathmap://XATKIT_CORE_PLATFORM/ReactPlatform.xmi#//@eventProviderDefinitions.1"/>
+  <executionRules>
+    <event href="pathmap://XATKIT_CUSTOM_LIBRARY/UmlBotLib#//@eventDefinitions.0"/>
+    <instructions xsi:type="common:VariableDeclaration" name="class">
+      <value xsi:type="execution:ActionInstance">
+        <action href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.0"/>
+        <values>
+          <parameter href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.0/@parameters.0"/>
+          <expression xsi:type="common:OperationCall" name="get">
+            <source xsi:type="common:ContextAccess" contextName="Class"/>
+            <args xsi:type="common:StringLiteral" value="name"/>
+          </expression>
+        </values>
+      </value>
+    </instructions>
+    <instructions xsi:type="common:OperationCall" name="store">
+      <source xsi:type="common:SessionAccess"/>
+      <args xsi:type="common:StringLiteral" value="class"/>
+      <args xsi:type="common:VariableAccess" referredVariable="//@executionRules.0/@instructions.0"/>
+    </instructions>
+    <instructions xsi:type="execution:ActionInstance">
+      <action href="pathmap://XATKIT_CORE_PLATFORM/ReactPlatform.xmi#//@actions.0"/>
+      <values>
+        <parameter href="pathmap://XATKIT_CORE_PLATFORM/ReactPlatform.xmi#//@actions.0/@parameters.0"/>
+        <expression xsi:type="common:OperationCall" name="+">
+          <source xsi:type="common:StringLiteral" value="Created class "/>
+          <args xsi:type="common:OperationCall" name="get">
+            <source xsi:type="common:ContextAccess" contextName="Class"/>
+            <args xsi:type="common:StringLiteral" value="name"/>
+          </args>
+        </expression>
+      </values>
+    </instructions>
+  </executionRules>
+  <executionRules>
+    <event href="pathmap://XATKIT_CUSTOM_LIBRARY/UmlBotLib#//@eventDefinitions.1"/>
+    <instructions xsi:type="common:VariableDeclaration" name="attribute">
+      <value xsi:type="execution:ActionInstance">
+        <action href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.3"/>
+        <values>
+          <parameter href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.3/@parameters.0"/>
+          <expression xsi:type="common:OperationCall" name="get">
+            <source xsi:type="common:SessionAccess"/>
+            <args xsi:type="common:StringLiteral" value="class"/>
+          </expression>
+        </values>
+        <values>
+          <parameter href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.3/@parameters.1"/>
+          <expression xsi:type="common:OperationCall" name="get">
+            <source xsi:type="common:ContextAccess" contextName="Attribute"/>
+            <args xsi:type="common:StringLiteral" value="name"/>
+          </expression>
+        </values>
+        <values>
+          <parameter href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.3/@parameters.2"/>
+          <expression xsi:type="common:OperationCall" name="get">
+            <source xsi:type="common:ContextAccess" contextName="Attribute"/>
+            <args xsi:type="common:StringLiteral" value="type"/>
+          </expression>
+        </values>
+      </value>
+    </instructions>
+    <instructions xsi:type="execution:ActionInstance">
+      <action href="pathmap://XATKIT_CORE_PLATFORM/ReactPlatform.xmi#//@actions.0"/>
+      <values>
+        <parameter href="pathmap://XATKIT_CORE_PLATFORM/ReactPlatform.xmi#//@actions.0/@parameters.0"/>
+        <expression xsi:type="common:OperationCall" name="+">
+          <source xsi:type="common:StringLiteral" value="Created attribute "/>
+          <args xsi:type="common:OperationCall" name="get">
+            <source xsi:type="common:ContextAccess" contextName="Attribute"/>
+            <args xsi:type="common:StringLiteral" value="name"/>
+          </args>
+        </expression>
+      </values>
+    </instructions>
+  </executionRules>
+  <executionRules>
+    <event href="pathmap://XATKIT_CUSTOM_LIBRARY/UmlBotLib#//@eventDefinitions.2"/>
+    <instructions xsi:type="common:VariableDeclaration" name="source">
+      <value xsi:type="execution:ActionInstance">
+        <action href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.1"/>
+        <values>
+          <parameter href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.1/@parameters.0"/>
+          <expression xsi:type="common:OperationCall" name="get">
+            <source xsi:type="common:ContextAccess" contextName="Composition"/>
+            <args xsi:type="common:StringLiteral" value="source"/>
+          </expression>
+        </values>
+      </value>
+    </instructions>
+    <instructions xsi:type="common:VariableDeclaration" name="target">
+      <value xsi:type="execution:ActionInstance">
+        <action href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.1"/>
+        <values>
+          <parameter href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.1/@parameters.0"/>
+          <expression xsi:type="common:OperationCall" name="get">
+            <source xsi:type="common:ContextAccess" contextName="Composition"/>
+            <args xsi:type="common:StringLiteral" value="target"/>
+          </expression>
+        </values>
+      </value>
+    </instructions>
+    <instructions xsi:type="common:VariableDeclaration" name="asso">
+      <value xsi:type="execution:ActionInstance">
+        <action href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.4"/>
+        <values>
+          <parameter href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.4/@parameters.0"/>
+          <expression xsi:type="common:VariableAccess" referredVariable="//@executionRules.2/@instructions.0"/>
+        </values>
+        <values>
+          <parameter href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.4/@parameters.1"/>
+          <expression xsi:type="common:VariableAccess" referredVariable="//@executionRules.2/@instructions.1"/>
+        </values>
+        <values>
+          <parameter href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.4/@parameters.2"/>
+          <expression xsi:type="common:StringLiteral" value="test"/>
+        </values>
+      </value>
+    </instructions>
+    <instructions xsi:type="execution:ActionInstance">
+      <action href="pathmap://XATKIT_CORE_PLATFORM/ReactPlatform.xmi#//@actions.0"/>
+      <values>
+        <parameter href="pathmap://XATKIT_CORE_PLATFORM/ReactPlatform.xmi#//@actions.0/@parameters.0"/>
+        <expression xsi:type="common:StringLiteral" value="Done"/>
+      </values>
+    </instructions>
+  </executionRules>
+  <executionRules>
+    <event href="pathmap://XATKIT_CUSTOM_LIBRARY/UmlBotLib#//@eventDefinitions.3"/>
+    <instructions xsi:type="common:VariableDeclaration" name="saved">
+      <value xsi:type="execution:ActionInstance">
+        <action href="pathmap://XATKIT_CORE_PLATFORM/UmlPlatform.xmi#//@actions.5"/>
+      </value>
+    </instructions>
+    <instructions xsi:type="execution:ActionInstance">
+      <action href="pathmap://XATKIT_CORE_PLATFORM/ReactPlatform.xmi#//@actions.5"/>
+      <values>
+        <parameter href="pathmap://XATKIT_CORE_PLATFORM/ReactPlatform.xmi#//@actions.5/@parameters.0"/>
+        <expression xsi:type="common:VariableAccess" referredVariable="//@executionRules.3/@instructions.0"/>
+      </values>
+    </instructions>
+  </executionRules>
+  <executionRules>
+    <event href="pathmap://XATKIT_CORE_LIBRARY/CoreLibrary.xmi#//@eventDefinitions.0"/>
+    <instructions xsi:type="execution:ActionInstance">
+      <action href="pathmap://XATKIT_CORE_PLATFORM/ReactPlatform.xmi#//@actions.0"/>
+      <values>
+        <parameter href="pathmap://XATKIT_CORE_PLATFORM/ReactPlatform.xmi#//@actions.0/@parameters.0"/>
+        <expression xsi:type="common:StringLiteral" value="Sorry I didn't get it :/"/>
+      </values>
+    </instructions>
+  </executionRules>
+  <imports xsi:type="common:LibraryImportDeclaration" path="UmlBot/UmlBot-Lib.xmi" alias="UmlBotLib"/>
+  <imports xsi:type="common:PlatformImportDeclaration" path="ReactPlatform"/>
+  <imports xsi:type="common:PlatformImportDeclaration" path="UmlPlatform"/>
+  <imports xsi:type="common:LibraryImportDeclaration" path="CoreLibrary"/>
+</execution:ExecutionModel>
