@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.xatkit</groupId>
         <artifactId>uml-platform</artifactId>
-        <version>2.0.1-SNAPSHOT</version>
+        <version>2.0.1</version>
     </parent>
 
     <artifactId>uml-platform-runtime</artifactId>
@@ -43,7 +43,7 @@
         <dependency>
             <groupId>com.xatkit</groupId>
             <artifactId>core</artifactId>
-            <version>2.0.1-SNAPSHOT</version>
+            <version>3.0.0</version>
             <scope>provided</scope>
         </dependency>
 
