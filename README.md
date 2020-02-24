@@ -3,10 +3,10 @@ Xatkit UML Platform
 
 [![License Badge](https://img.shields.io/badge/license-EPL%202.0-brightgreen.svg)](https://opensource.org/licenses/EPL-2.0)
 [![Build Status](https://travis-ci.com/xatkit-bot-platform/xatkit-uml-platform.svg?branch=master)](https://travis-ci.com/xatkit-bot-platform/xatkit-uml-platform)
-[![Wiki Badge](https://img.shields.io/badge/doc-wiki-blue)](https://github.com/xatkit-bot-platform/xatkit-releases/wiki/Xatkit-UML-Platform)
+[![Wiki Badge](https://img.shields.io/badge/doc-wiki-blue)](https://github.com/xatkit-bot-platform/xatkit/wiki/Xatkit-UML-Platform)
 
 
-Create and manipulate [UML](https://www.omg.org/spec/UML/About-UML/) (meta) models in Xatkit execution models. This platform is **not** bundled with the [Xatkit release](https://github.com/xatkit-bot-platform/xatkit-releases/releases).
+Create and manipulate [UML](https://www.omg.org/spec/UML/About-UML/) (meta) models in Xatkit execution models.
 
 UML models are internally stored as instances of the Eclipse UML metamodel. To render them (see *Save* action below), we rely on [PlantuML](http://plantuml.com/): the UML model is transformed to PlantUML syntax and render by PlantUML before returning it back to the requester.  
 
